@@ -14,14 +14,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // 初始化数据
-        HYBMusicManager.sharedInstance().copyDatabasePath()
         HYBMusicManager.sharedInstance().isPlaying = true
+        self.requestSongerInfoToDb(index: 1025)
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // 程序入口
         var rootController = HYBRootTabbarController()
         self.window?.rootViewController = rootController
         return true
+    }
+    
+    private func requestSongerInfoToDb(index: Int = 1025) {
+        // 当数据库中没有数据时，请打开这里，当请求到的数据都写入到数据后，请关闭这里
+        return
+        
+        var path = "/v1/restserver/ting?from=android&version=2.4.0&method=baidu.ting.artist.getinfo&format=json&tinguid=\(index)"
+        
+        HYBBaseRequest.singerInfo(path, succss: { (singerModel) -> Void in
+            if let model = singerModel {
+                HYBSingerModel.insertToDB(model)
+            }
+            
+            if index < 136085621 {
+               self.requestSongerInfoToDb(index: index + 1)
+            }
+            }) { (error) -> Void in
+                
+        }
     }
     
     func applicationWillResignActive(application: UIApplication) {

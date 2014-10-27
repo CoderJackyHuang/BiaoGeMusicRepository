@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3E68B451-B044-4EF1-943F-7F397D61920F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BiaoGeMusic</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3726E3531C802C425B9364CCC4A4027F3E78D3ED</key>
+		<string>https://github.com/632840804/BiaoGeMusicRepository.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BiaoGeMusic/BiaoGeMusic.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3726E3531C802C425B9364CCC4A4027F3E78D3ED</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/632840804/BiaoGeMusicRepository.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3726E3531C802C425B9364CCC4A4027F3E78D3ED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3726E3531C802C425B9364CCC4A4027F3E78D3ED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BiaoGeMusicRepository</string>
+		</dict>
+	</array>
+</dict>
+</plist>

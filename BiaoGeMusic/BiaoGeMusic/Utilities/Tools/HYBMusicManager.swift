@@ -25,6 +25,7 @@ class HYBMusicManager {
         
         dispatch_once(&Instance.onceToken, { () -> Void in
             Instance.instance = HYBMusicManager()
+            Instance.instance?.copyDatabasePath()
         })
         
         return Instance.instance!
@@ -41,5 +42,8 @@ class HYBMusicManager {
                 NSFileManager.defaultManager().copyItemAtPath(srcPath!, toPath: path, error: nil)
             }
         }
+        
+        /// 初始化数据库
+        LKDBHelper.getUsingLKDBHelper().setDBPath(path)
     }
 }

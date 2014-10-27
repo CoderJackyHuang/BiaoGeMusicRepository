@@ -28,3 +28,9 @@ let kMiddleScreenHeight = kScreenHeight - kStatusBarHeight - kNavigationBarHeigh
 
 /// 导航颜色
 let kNavColor = UIColor(red: 192.0 / 255.0, green: 37.0 / 255.0, blue: 62.0 / 255.0, alpha: 1.0)
+
+///
+/// 与请求数据相关的定义
+///
+let kNetworkErrorMsg = "网络不给力，请检查网络设置"
+let kLoadingMsg = "加载中..."

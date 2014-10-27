@@ -24,6 +24,71 @@
 		A869AB2419F652BC003FF45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A869AB2319F652BC003FF45A /* Main.storyboard */; };
 		A869AB2619F65A21003FF45A /* HYBParentTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A869AB2519F65A21003FF45A /* HYBParentTableController.swift */; };
 		A869AB2919F663DD003FF45A /* HYBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A869AB2819F663DD003FF45A /* HYBProgressHUD.swift */; };
+		A8B1482019F8B03A0013C798 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8B1481F19F8B03A0013C798 /* ProgressHUD.bundle */; };
+		A8B1482419F8B8920013C798 /* HYBSingerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1482319F8B8920013C798 /* HYBSingerModel.swift */; };
+		A8B1485119F8D2360013C798 /* HYBSingerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1485019F8D2360013C798 /* HYBSingerCell.swift */; };
+		A8B1485719F8D40C0013C798 /* StyledTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1485619F8D40C0013C798 /* StyledTableViewCell.m */; };
+		A8B1485A19F8D5760013C798 /* HYBLoadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1485919F8D5760013C798 /* HYBLoadImageView.swift */; };
+		A8B1485C19F8DCDC0013C798 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B1485B19F8DCDC0013C798 /* libsqlite3.0.dylib */; };
+		A8B1488019F8DDD90013C798 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486019F8DDD90013C798 /* MKAnnotationView+WebCache.m */; };
+		A8B1488119F8DDD90013C798 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486219F8DDD90013C798 /* NSData+ImageContentType.m */; };
+		A8B1488219F8DDD90013C798 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486419F8DDD90013C798 /* SDImageCache.m */; };
+		A8B1488319F8DDD90013C798 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486619F8DDD90013C798 /* SDWebImageCompat.m */; };
+		A8B1488419F8DDD90013C798 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486819F8DDD90013C798 /* SDWebImageDecoder.m */; };
+		A8B1488519F8DDD90013C798 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486A19F8DDD90013C798 /* SDWebImageDownloader.m */; };
+		A8B1488619F8DDD90013C798 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486C19F8DDD90013C798 /* SDWebImageDownloaderOperation.m */; };
+		A8B1488719F8DDD90013C798 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1486E19F8DDD90013C798 /* SDWebImageManager.m */; };
+		A8B1488819F8DDD90013C798 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487119F8DDD90013C798 /* SDWebImagePrefetcher.m */; };
+		A8B1488919F8DDD90013C798 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487319F8DDD90013C798 /* UIButton+WebCache.m */; };
+		A8B1488A19F8DDD90013C798 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487519F8DDD90013C798 /* UIImage+GIF.m */; };
+		A8B1488B19F8DDD90013C798 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487719F8DDD90013C798 /* UIImage+MultiFormat.m */; };
+		A8B1488C19F8DDD90013C798 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487919F8DDD90013C798 /* UIImage+WebP.m */; };
+		A8B1488D19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487B19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m */; };
+		A8B1488E19F8DDD90013C798 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487D19F8DDD90013C798 /* UIImageView+WebCache.m */; };
+		A8B1488F19F8DDD90013C798 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1487F19F8DDD90013C798 /* UIView+WebCacheOperation.m */; };
+		A8B1489619F8EEE00013C798 /* HYBSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1489519F8EEE00013C798 /* HYBSearchRequest.swift */; };
+		A8B1489919F8F30C0013C798 /* HYBBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1489819F8F30C0013C798 /* HYBBaseRequest.swift */; };
+		A8B1489B19F8F37D0013C798 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1489A19F8F37D0013C798 /* Server.swift */; };
+		A8B148B119F901E40013C798 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B1489F19F901E40013C798 /* AFHTTPRequestOperation.m */; };
+		A8B148B219F901E40013C798 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148A119F901E40013C798 /* AFHTTPRequestOperationManager.m */; };
+		A8B148B319F901E40013C798 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148A319F901E40013C798 /* AFHTTPSessionManager.m */; };
+		A8B148B419F901E40013C798 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148A619F901E40013C798 /* AFNetworkReachabilityManager.m */; };
+		A8B148B519F901E40013C798 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148A819F901E40013C798 /* AFSecurityPolicy.m */; };
+		A8B148B619F901E40013C798 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148AA19F901E40013C798 /* AFURLConnectionOperation.m */; };
+		A8B148B719F901E40013C798 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148AC19F901E40013C798 /* AFURLRequestSerialization.m */; };
+		A8B148B819F901E40013C798 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148AE19F901E40013C798 /* AFURLResponseSerialization.m */; };
+		A8B148B919F901E40013C798 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148B019F901E40013C798 /* AFURLSessionManager.m */; };
+		A8B3A67419F9E5100009AF0E /* Shorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67319F9E5100009AF0E /* Shorthand.swift */; };
+		A8B3A67619F9EA930009AF0E /* HYBSongListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67519F9EA930009AF0E /* HYBSongListModel.swift */; };
+		A8B3A67919F9ED360009AF0E /* HYBBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67819F9ED360009AF0E /* HYBBaseModel.swift */; };
+		A8B3A69519FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67E19FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.m */; };
+		A8B3A69619FA15CA0009AF0E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68119FA15CA0009AF0E /* FMDatabase.m */; };
+		A8B3A69719FA15CA0009AF0E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68319FA15CA0009AF0E /* FMDatabaseAdditions.m */; };
+		A8B3A69819FA15CA0009AF0E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68519FA15CA0009AF0E /* FMDatabasePool.m */; };
+		A8B3A69919FA15CA0009AF0E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68719FA15CA0009AF0E /* FMDatabaseQueue.m */; };
+		A8B3A69A19FA15CA0009AF0E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68919FA15CA0009AF0E /* FMResultSet.m */; };
+		A8B3A69B19FA15CA0009AF0E /* LKDB+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68C19FA15CA0009AF0E /* LKDB+Mapping.m */; };
+		A8B3A69C19FA15CA0009AF0E /* LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A68E19FA15CA0009AF0E /* LKDBHelper.m */; };
+		A8B3A69D19FA15CA0009AF0E /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A69019FA15CA0009AF0E /* LKDBUtils.m */; };
+		A8B3A69E19FA15CA0009AF0E /* NSObject+LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A69219FA15CA0009AF0E /* NSObject+LKDBHelper.m */; };
+		A8B3A69F19FA15CA0009AF0E /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A69419FA15CA0009AF0E /* NSObject+LKModel.m */; };
+		A8B3A6A219FA1CE10009AF0E /* HYBSongListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6A119FA1CE10009AF0E /* HYBSongListController.swift */; };
+		A8B3A6A519FA1D830009AF0E /* HYBSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6A419FA1D830009AF0E /* HYBSongCell.swift */; };
+		A8B3A6A919FA23040009AF0E /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6A719FA23040009AF0E /* RefreshView.swift */; };
+		A8B3A6AA19FA23040009AF0E /* RefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B3A6A819FA23040009AF0E /* RefreshView.xib */; };
+		A8B3A6AC19FA25AF0009AF0E /* HYBRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6AB19FA25AF0009AF0E /* HYBRefreshController.swift */; };
+		A8B3A6B019FA31E00009AF0E /* HYBSongPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6AF19FA31E00009AF0E /* HYBSongPlayController.swift */; };
+		A8B3A6B219FA37EC0009AF0E /* HYBPlaySongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6B119FA37EC0009AF0E /* HYBPlaySongModel.swift */; };
+		A8B3A6EF19FA40880009AF0E /* HYBSongLRCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6EE19FA40880009AF0E /* HYBSongLRCView.swift */; };
+		A8B3A6F119FA40BD0009AF0E /* HYBAudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A6F019FA40BD0009AF0E /* HYBAudioPlayView.swift */; };
+		A8B3A70619FA5EE30009AF0E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A70419FA5EB90009AF0E /* ImageIO.framework */; };
+		A8B3A70719FA5EE80009AF0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A70219FA5EB10009AF0E /* MobileCoreServices.framework */; };
+		A8B3A70819FA5EEB0009AF0E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A70019FA5EAC0009AF0E /* Security.framework */; };
+		A8B3A70919FA5EF00009AF0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6FE19FA5EA70009AF0E /* AudioToolbox.framework */; };
+		A8B3A70A19FA5EF80009AF0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6FC19FA5E9F0009AF0E /* SystemConfiguration.framework */; };
+		A8B3A70B19FA5EFD0009AF0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6FA19FA5E980009AF0E /* AVFoundation.framework */; };
+		A8B3A70C19FA5F050009AF0E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6F619FA5E8A0009AF0E /* MediaPlayer.framework */; };
+		A8B3A70E19FA5F440009AF0E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A70D19FA5F440009AF0E /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +123,112 @@
 		A869AB2319F652BC003FF45A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A869AB2519F65A21003FF45A /* HYBParentTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYBParentTableController.swift; sourceTree = "<group>"; };
 		A869AB2819F663DD003FF45A /* HYBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBProgressHUD.swift; path = Utilities/GUI/ProgressHUD/HYBProgressHUD.swift; sourceTree = "<group>"; };
+		A8B1481F19F8B03A0013C798 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = Utilities/GUI/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
+		A8B1482319F8B8920013C798 /* HYBSingerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSingerModel.swift; path = Models/SearchModels/HYBSingerModel.swift; sourceTree = "<group>"; };
+		A8B1484B19F8C7EE0013C798 /* Swift-ObjectiveC-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-ObjectiveC-header.h"; sourceTree = "<group>"; };
+		A8B1485019F8D2360013C798 /* HYBSingerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSingerCell.swift; path = SearchCells/SingerCell/HYBSingerCell.swift; sourceTree = "<group>"; };
+		A8B1485519F8D40C0013C798 /* StyledTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTableViewCell.h; sourceTree = "<group>"; };
+		A8B1485619F8D40C0013C798 /* StyledTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTableViewCell.m; sourceTree = "<group>"; };
+		A8B1485919F8D5760013C798 /* HYBLoadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBLoadImageView.swift; path = Utilities/GUI/HYBPAImageView/HYBLoadImageView.swift; sourceTree = "<group>"; };
+		A8B1485B19F8DCDC0013C798 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A8B1485F19F8DDD90013C798 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		A8B1486019F8DDD90013C798 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		A8B1486119F8DDD90013C798 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		A8B1486219F8DDD90013C798 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		A8B1486319F8DDD90013C798 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		A8B1486419F8DDD90013C798 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		A8B1486519F8DDD90013C798 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		A8B1486619F8DDD90013C798 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		A8B1486719F8DDD90013C798 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		A8B1486819F8DDD90013C798 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		A8B1486919F8DDD90013C798 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		A8B1486A19F8DDD90013C798 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		A8B1486B19F8DDD90013C798 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		A8B1486C19F8DDD90013C798 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		A8B1486D19F8DDD90013C798 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		A8B1486E19F8DDD90013C798 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		A8B1486F19F8DDD90013C798 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		A8B1487019F8DDD90013C798 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		A8B1487119F8DDD90013C798 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		A8B1487219F8DDD90013C798 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		A8B1487319F8DDD90013C798 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		A8B1487419F8DDD90013C798 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		A8B1487519F8DDD90013C798 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		A8B1487619F8DDD90013C798 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		A8B1487719F8DDD90013C798 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		A8B1487819F8DDD90013C798 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		A8B1487919F8DDD90013C798 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		A8B1487A19F8DDD90013C798 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		A8B1487B19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		A8B1487C19F8DDD90013C798 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		A8B1487D19F8DDD90013C798 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		A8B1487E19F8DDD90013C798 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		A8B1487F19F8DDD90013C798 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		A8B1489519F8EEE00013C798 /* HYBSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSearchRequest.swift; path = Utilities/Network/HYBSearchRequest.swift; sourceTree = "<group>"; };
+		A8B1489819F8F30C0013C798 /* HYBBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBBaseRequest.swift; path = Utilities/Network/BaseRequest/HYBBaseRequest.swift; sourceTree = "<group>"; };
+		A8B1489A19F8F37D0013C798 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		A8B1489E19F901E40013C798 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		A8B1489F19F901E40013C798 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		A8B148A019F901E40013C798 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		A8B148A119F901E40013C798 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		A8B148A219F901E40013C798 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		A8B148A319F901E40013C798 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		A8B148A419F901E40013C798 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		A8B148A519F901E40013C798 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		A8B148A619F901E40013C798 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		A8B148A719F901E40013C798 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		A8B148A819F901E40013C798 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		A8B148A919F901E40013C798 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		A8B148AA19F901E40013C798 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		A8B148AB19F901E40013C798 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		A8B148AC19F901E40013C798 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		A8B148AD19F901E40013C798 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		A8B148AE19F901E40013C798 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		A8B148AF19F901E40013C798 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		A8B148B019F901E40013C798 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		A8B3A67319F9E5100009AF0E /* Shorthand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shorthand.swift; sourceTree = "<group>"; };
+		A8B3A67519F9EA930009AF0E /* HYBSongListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongListModel.swift; path = Models/SearchModels/HYBSongListModel.swift; sourceTree = "<group>"; };
+		A8B3A67819F9ED360009AF0E /* HYBBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBBaseModel.swift; path = Models/BaseModels/HYBBaseModel.swift; sourceTree = "<group>"; };
+		A8B3A67D19FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
+		A8B3A67E19FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
+		A8B3A68019FA15CA0009AF0E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A8B3A68119FA15CA0009AF0E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A8B3A68219FA15CA0009AF0E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A8B3A68319FA15CA0009AF0E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A8B3A68419FA15CA0009AF0E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A8B3A68519FA15CA0009AF0E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A8B3A68619FA15CA0009AF0E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A8B3A68719FA15CA0009AF0E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A8B3A68819FA15CA0009AF0E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A8B3A68919FA15CA0009AF0E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A8B3A68B19FA15CA0009AF0E /* LKDB+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LKDB+Mapping.h"; sourceTree = "<group>"; };
+		A8B3A68C19FA15CA0009AF0E /* LKDB+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LKDB+Mapping.m"; sourceTree = "<group>"; };
+		A8B3A68D19FA15CA0009AF0E /* LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBHelper.h; sourceTree = "<group>"; };
+		A8B3A68E19FA15CA0009AF0E /* LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBHelper.m; sourceTree = "<group>"; };
+		A8B3A68F19FA15CA0009AF0E /* LKDBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBUtils.h; sourceTree = "<group>"; };
+		A8B3A69019FA15CA0009AF0E /* LKDBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBUtils.m; sourceTree = "<group>"; };
+		A8B3A69119FA15CA0009AF0E /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
+		A8B3A69219FA15CA0009AF0E /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
+		A8B3A69319FA15CA0009AF0E /* NSObject+LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKModel.h"; sourceTree = "<group>"; };
+		A8B3A69419FA15CA0009AF0E /* NSObject+LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKModel.m"; sourceTree = "<group>"; };
+		A8B3A6A119FA1CE10009AF0E /* HYBSongListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongListController.swift; path = Controllers/SearchControllers/SongListController/HYBSongListController.swift; sourceTree = "<group>"; };
+		A8B3A6A419FA1D830009AF0E /* HYBSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongCell.swift; path = SearchCells/SongCells/HYBSongCell.swift; sourceTree = "<group>"; };
+		A8B3A6A719FA23040009AF0E /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		A8B3A6A819FA23040009AF0E /* RefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshView.xib; sourceTree = "<group>"; };
+		A8B3A6AB19FA25AF0009AF0E /* HYBRefreshController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYBRefreshController.swift; sourceTree = "<group>"; };
+		A8B3A6AF19FA31E00009AF0E /* HYBSongPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongPlayController.swift; path = Controllers/SearchControllers/SongPlayController/HYBSongPlayController.swift; sourceTree = "<group>"; };
+		A8B3A6B119FA37EC0009AF0E /* HYBPlaySongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBPlaySongModel.swift; path = Models/SearchModels/HYBPlaySongModel.swift; sourceTree = "<group>"; };
+		A8B3A6EE19FA40880009AF0E /* HYBSongLRCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongLRCView.swift; path = AudioPlayViews/HYBSongLRCView.swift; sourceTree = "<group>"; };
+		A8B3A6F019FA40BD0009AF0E /* HYBAudioPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBAudioPlayView.swift; path = AudioPlayViews/HYBAudioPlayView.swift; sourceTree = "<group>"; };
+		A8B3A6F619FA5E8A0009AF0E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A8B3A6F819FA5E910009AF0E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A8B3A6FA19FA5E980009AF0E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A8B3A6FC19FA5E9F0009AF0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8B3A6FE19FA5EA70009AF0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A8B3A70019FA5EAC0009AF0E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8B3A70219FA5EB10009AF0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A8B3A70419FA5EB90009AF0E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A8B3A70D19FA5F440009AF0E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +236,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B3A70E19FA5F440009AF0E /* libz.dylib in Frameworks */,
+				A8B3A70C19FA5F050009AF0E /* MediaPlayer.framework in Frameworks */,
+				A8B3A70B19FA5EFD0009AF0E /* AVFoundation.framework in Frameworks */,
+				A8B3A70A19FA5EF80009AF0E /* SystemConfiguration.framework in Frameworks */,
+				A8B3A70919FA5EF00009AF0E /* AudioToolbox.framework in Frameworks */,
+				A8B3A70819FA5EEB0009AF0E /* Security.framework in Frameworks */,
+				A8B3A70719FA5EE80009AF0E /* MobileCoreServices.framework in Frameworks */,
+				A8B3A70619FA5EE30009AF0E /* ImageIO.framework in Frameworks */,
+				A8B1485C19F8DCDC0013C798 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,8 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				A83555FD19F61E010047F519 /* BiaoGeMusic */,
-				A835561319F61E010047F519 /* BiaoGeMusicTests */,
 				A83555FC19F61E010047F519 /* Products */,
+				A835561319F61E010047F519 /* BiaoGeMusicTests */,
+				A8B1485D19F8DCEC0013C798 /* Frameworkds */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +298,7 @@
 				A835560719F61E010047F519 /* Images.xcassets */,
 				A83555FF19F61E010047F519 /* Info.plist */,
 				A869AB2319F652BC003FF45A /* Main.storyboard */,
+				A8B1484B19F8C7EE0013C798 /* Swift-ObjectiveC-header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +323,9 @@
 		A869AAEB19F62318003FF45A /* OpensourceLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A8B3A67A19FA15CA0009AF0E /* LKDBHelper2.0 */,
+				A8B1489D19F901E40013C798 /* AFNetworking */,
+				A8B1485E19F8DDD90013C798 /* SDWebImage */,
 			);
 			name = OpensourceLibrary;
 			sourceTree = "<group>";
@@ -148,6 +333,7 @@
 		A869AAEC19F62325003FF45A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1489419F8EEAB0013C798 /* Network */,
 				A869AB0C19F640F2003FF45A /* Tools */,
 				A869AB0419F63A72003FF45A /* GUI */,
 				A869AB0119F62C37003FF45A /* CommonConstants */,
@@ -179,6 +365,8 @@
 		A869AAEF19F62339003FF45A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8B3A67719F9ED230009AF0E /* BaseModels */,
+				A8B1482119F8B8650013C798 /* SearchModels */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -206,6 +394,7 @@
 			children = (
 				A869AAF319F6243D003FF45A /* HYBBaseController.swift */,
 				A869AB2519F65A21003FF45A /* HYBParentTableController.swift */,
+				A8B3A6AB19FA25AF0009AF0E /* HYBRefreshController.swift */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -213,6 +402,7 @@
 		A869AAF519F62495003FF45A /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1484C19F8D1D00013C798 /* SearchCells */,
 			);
 			name = CustomCells;
 			path = Views/CustomCells;
@@ -221,6 +411,8 @@
 		A869AAF619F62495003FF45A /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				A8B3A6ED19FA405A0009AF0E /* AudioPlayViews */,
+				A8B3A6A619FA23040009AF0E /* RefreshView */,
 			);
 			name = CustomViews;
 			path = Views/CustomViews;
@@ -248,6 +440,8 @@
 			isa = PBXGroup;
 			children = (
 				A869AB0219F62C37003FF45A /* GlobalDefine.swift */,
+				A8B1489A19F8F37D0013C798 /* Server.swift */,
+				A8B3A67319F9E5100009AF0E /* Shorthand.swift */,
 			);
 			name = CommonConstants;
 			path = Utilities/CommonConstants;
@@ -256,6 +450,8 @@
 		A869AB0419F63A72003FF45A /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1485819F8D5580013C798 /* LoadImageView */,
+				A8B1485419F8D40C0013C798 /* StyledTableViewCell */,
 				A869AB2719F663C8003FF45A /* ProgressHUD */,
 				A869AB0719F63AA7003FF45A /* UIMaker */,
 			);
@@ -306,6 +502,8 @@
 		A869AB1819F648CF003FF45A /* SearchControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8B3A6AE19FA31C10009AF0E /* SongPlayController */,
+				A8B3A6A019FA1CC00009AF0E /* SongListController */,
 				A869AB1D19F6496E003FF45A /* SearchController */,
 			);
 			name = SearchControllers;
@@ -346,9 +544,269 @@
 		A869AB2719F663C8003FF45A /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1481F19F8B03A0013C798 /* ProgressHUD.bundle */,
 				A869AB2819F663DD003FF45A /* HYBProgressHUD.swift */,
 			);
 			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		A8B1482119F8B8650013C798 /* SearchModels */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1482319F8B8920013C798 /* HYBSingerModel.swift */,
+				A8B3A6B119FA37EC0009AF0E /* HYBPlaySongModel.swift */,
+				A8B3A67519F9EA930009AF0E /* HYBSongListModel.swift */,
+			);
+			name = SearchModels;
+			sourceTree = "<group>";
+		};
+		A8B1484C19F8D1D00013C798 /* SearchCells */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6A319FA1D630009AF0E /* SongCells */,
+				A8B1484F19F8D1F20013C798 /* SingerCells */,
+			);
+			name = SearchCells;
+			sourceTree = "<group>";
+		};
+		A8B1484F19F8D1F20013C798 /* SingerCells */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1485019F8D2360013C798 /* HYBSingerCell.swift */,
+			);
+			name = SingerCells;
+			sourceTree = "<group>";
+		};
+		A8B1485419F8D40C0013C798 /* StyledTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1485519F8D40C0013C798 /* StyledTableViewCell.h */,
+				A8B1485619F8D40C0013C798 /* StyledTableViewCell.m */,
+			);
+			name = StyledTableViewCell;
+			path = Utilities/GUI/StyledTableViewCell;
+			sourceTree = "<group>";
+		};
+		A8B1485819F8D5580013C798 /* LoadImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1485919F8D5760013C798 /* HYBLoadImageView.swift */,
+			);
+			name = LoadImageView;
+			sourceTree = "<group>";
+		};
+		A8B1485D19F8DCEC0013C798 /* Frameworkds */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A70D19FA5F440009AF0E /* libz.dylib */,
+				A8B3A70419FA5EB90009AF0E /* ImageIO.framework */,
+				A8B3A70219FA5EB10009AF0E /* MobileCoreServices.framework */,
+				A8B3A70019FA5EAC0009AF0E /* Security.framework */,
+				A8B3A6FE19FA5EA70009AF0E /* AudioToolbox.framework */,
+				A8B3A6FC19FA5E9F0009AF0E /* SystemConfiguration.framework */,
+				A8B3A6FA19FA5E980009AF0E /* AVFoundation.framework */,
+				A8B3A6F819FA5E910009AF0E /* libxml2.dylib */,
+				A8B3A6F619FA5E8A0009AF0E /* MediaPlayer.framework */,
+				A8B1485B19F8DCDC0013C798 /* libsqlite3.0.dylib */,
+			);
+			name = Frameworkds;
+			sourceTree = "<group>";
+		};
+		A8B1485E19F8DDD90013C798 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1485F19F8DDD90013C798 /* MKAnnotationView+WebCache.h */,
+				A8B1486019F8DDD90013C798 /* MKAnnotationView+WebCache.m */,
+				A8B1486119F8DDD90013C798 /* NSData+ImageContentType.h */,
+				A8B1486219F8DDD90013C798 /* NSData+ImageContentType.m */,
+				A8B1486319F8DDD90013C798 /* SDImageCache.h */,
+				A8B1486419F8DDD90013C798 /* SDImageCache.m */,
+				A8B1486519F8DDD90013C798 /* SDWebImageCompat.h */,
+				A8B1486619F8DDD90013C798 /* SDWebImageCompat.m */,
+				A8B1486719F8DDD90013C798 /* SDWebImageDecoder.h */,
+				A8B1486819F8DDD90013C798 /* SDWebImageDecoder.m */,
+				A8B1486919F8DDD90013C798 /* SDWebImageDownloader.h */,
+				A8B1486A19F8DDD90013C798 /* SDWebImageDownloader.m */,
+				A8B1486B19F8DDD90013C798 /* SDWebImageDownloaderOperation.h */,
+				A8B1486C19F8DDD90013C798 /* SDWebImageDownloaderOperation.m */,
+				A8B1486D19F8DDD90013C798 /* SDWebImageManager.h */,
+				A8B1486E19F8DDD90013C798 /* SDWebImageManager.m */,
+				A8B1486F19F8DDD90013C798 /* SDWebImageOperation.h */,
+				A8B1487019F8DDD90013C798 /* SDWebImagePrefetcher.h */,
+				A8B1487119F8DDD90013C798 /* SDWebImagePrefetcher.m */,
+				A8B1487219F8DDD90013C798 /* UIButton+WebCache.h */,
+				A8B1487319F8DDD90013C798 /* UIButton+WebCache.m */,
+				A8B1487419F8DDD90013C798 /* UIImage+GIF.h */,
+				A8B1487519F8DDD90013C798 /* UIImage+GIF.m */,
+				A8B1487619F8DDD90013C798 /* UIImage+MultiFormat.h */,
+				A8B1487719F8DDD90013C798 /* UIImage+MultiFormat.m */,
+				A8B1487819F8DDD90013C798 /* UIImage+WebP.h */,
+				A8B1487919F8DDD90013C798 /* UIImage+WebP.m */,
+				A8B1487A19F8DDD90013C798 /* UIImageView+HighlightedWebCache.h */,
+				A8B1487B19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m */,
+				A8B1487C19F8DDD90013C798 /* UIImageView+WebCache.h */,
+				A8B1487D19F8DDD90013C798 /* UIImageView+WebCache.m */,
+				A8B1487E19F8DDD90013C798 /* UIView+WebCacheOperation.h */,
+				A8B1487F19F8DDD90013C798 /* UIView+WebCacheOperation.m */,
+			);
+			name = SDWebImage;
+			path = OpensourceLibrary/SDWebImage;
+			sourceTree = "<group>";
+		};
+		A8B1489419F8EEAB0013C798 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1489719F8F2EF0013C798 /* BaseRequest */,
+				A8B1489519F8EEE00013C798 /* HYBSearchRequest.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		A8B1489719F8F2EF0013C798 /* BaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1489819F8F30C0013C798 /* HYBBaseRequest.swift */,
+			);
+			name = BaseRequest;
+			sourceTree = "<group>";
+		};
+		A8B1489D19F901E40013C798 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1489E19F901E40013C798 /* AFHTTPRequestOperation.h */,
+				A8B1489F19F901E40013C798 /* AFHTTPRequestOperation.m */,
+				A8B148A019F901E40013C798 /* AFHTTPRequestOperationManager.h */,
+				A8B148A119F901E40013C798 /* AFHTTPRequestOperationManager.m */,
+				A8B148A219F901E40013C798 /* AFHTTPSessionManager.h */,
+				A8B148A319F901E40013C798 /* AFHTTPSessionManager.m */,
+				A8B148A419F901E40013C798 /* AFNetworking.h */,
+				A8B148A519F901E40013C798 /* AFNetworkReachabilityManager.h */,
+				A8B148A619F901E40013C798 /* AFNetworkReachabilityManager.m */,
+				A8B148A719F901E40013C798 /* AFSecurityPolicy.h */,
+				A8B148A819F901E40013C798 /* AFSecurityPolicy.m */,
+				A8B148A919F901E40013C798 /* AFURLConnectionOperation.h */,
+				A8B148AA19F901E40013C798 /* AFURLConnectionOperation.m */,
+				A8B148AB19F901E40013C798 /* AFURLRequestSerialization.h */,
+				A8B148AC19F901E40013C798 /* AFURLRequestSerialization.m */,
+				A8B148AD19F901E40013C798 /* AFURLResponseSerialization.h */,
+				A8B148AE19F901E40013C798 /* AFURLResponseSerialization.m */,
+				A8B148AF19F901E40013C798 /* AFURLSessionManager.h */,
+				A8B148B019F901E40013C798 /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			path = OpensourceLibrary/AFNetworking;
+			sourceTree = "<group>";
+		};
+		A8B3A67719F9ED230009AF0E /* BaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A67819F9ED360009AF0E /* HYBBaseModel.swift */,
+			);
+			name = BaseModels;
+			sourceTree = "<group>";
+		};
+		A8B3A67A19FA15CA0009AF0E /* LKDBHelper2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A67B19FA15CA0009AF0E /* FMDB */,
+				A8B3A68A19FA15CA0009AF0E /* Helper */,
+			);
+			name = LKDBHelper2.0;
+			path = OpensourceLibrary/LKDBHelper2.0;
+			sourceTree = "<group>";
+		};
+		A8B3A67B19FA15CA0009AF0E /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A67C19FA15CA0009AF0E /* extra */,
+				A8B3A67F19FA15CA0009AF0E /* src */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		A8B3A67C19FA15CA0009AF0E /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A67D19FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.h */,
+				A8B3A67E19FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.m */,
+			);
+			path = extra;
+			sourceTree = "<group>";
+		};
+		A8B3A67F19FA15CA0009AF0E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A68019FA15CA0009AF0E /* FMDatabase.h */,
+				A8B3A68119FA15CA0009AF0E /* FMDatabase.m */,
+				A8B3A68219FA15CA0009AF0E /* FMDatabaseAdditions.h */,
+				A8B3A68319FA15CA0009AF0E /* FMDatabaseAdditions.m */,
+				A8B3A68419FA15CA0009AF0E /* FMDatabasePool.h */,
+				A8B3A68519FA15CA0009AF0E /* FMDatabasePool.m */,
+				A8B3A68619FA15CA0009AF0E /* FMDatabaseQueue.h */,
+				A8B3A68719FA15CA0009AF0E /* FMDatabaseQueue.m */,
+				A8B3A68819FA15CA0009AF0E /* FMResultSet.h */,
+				A8B3A68919FA15CA0009AF0E /* FMResultSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A8B3A68A19FA15CA0009AF0E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A68B19FA15CA0009AF0E /* LKDB+Mapping.h */,
+				A8B3A68C19FA15CA0009AF0E /* LKDB+Mapping.m */,
+				A8B3A68D19FA15CA0009AF0E /* LKDBHelper.h */,
+				A8B3A68E19FA15CA0009AF0E /* LKDBHelper.m */,
+				A8B3A68F19FA15CA0009AF0E /* LKDBUtils.h */,
+				A8B3A69019FA15CA0009AF0E /* LKDBUtils.m */,
+				A8B3A69119FA15CA0009AF0E /* NSObject+LKDBHelper.h */,
+				A8B3A69219FA15CA0009AF0E /* NSObject+LKDBHelper.m */,
+				A8B3A69319FA15CA0009AF0E /* NSObject+LKModel.h */,
+				A8B3A69419FA15CA0009AF0E /* NSObject+LKModel.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A8B3A6A019FA1CC00009AF0E /* SongListController */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6A119FA1CE10009AF0E /* HYBSongListController.swift */,
+			);
+			name = SongListController;
+			sourceTree = "<group>";
+		};
+		A8B3A6A319FA1D630009AF0E /* SongCells */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6A419FA1D830009AF0E /* HYBSongCell.swift */,
+			);
+			name = SongCells;
+			sourceTree = "<group>";
+		};
+		A8B3A6A619FA23040009AF0E /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6A719FA23040009AF0E /* RefreshView.swift */,
+				A8B3A6A819FA23040009AF0E /* RefreshView.xib */,
+			);
+			path = RefreshView;
+			sourceTree = "<group>";
+		};
+		A8B3A6AE19FA31C10009AF0E /* SongPlayController */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6AF19FA31E00009AF0E /* HYBSongPlayController.swift */,
+			);
+			name = SongPlayController;
+			sourceTree = "<group>";
+		};
+		A8B3A6ED19FA405A0009AF0E /* AudioPlayViews */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3A6EE19FA40880009AF0E /* HYBSongLRCView.swift */,
+				A8B3A6F019FA40BD0009AF0E /* HYBAudioPlayView.swift */,
+			);
+			name = AudioPlayViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,9 +889,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B1482019F8B03A0013C798 /* ProgressHUD.bundle in Resources */,
 				A869AB2419F652BC003FF45A /* Main.storyboard in Resources */,
 				A835560819F61E010047F519 /* Images.xcassets in Resources */,
 				A869AB0B19F6408E003FF45A /* FreeMusic.db in Resources */,
+				A8B3A6AA19FA23040009AF0E /* RefreshView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,19 +911,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B1489919F8F30C0013C798 /* HYBBaseRequest.swift in Sources */,
+				A8B1488A19F8DDD90013C798 /* UIImage+GIF.m in Sources */,
 				A869AB0019F62C2A003FF45A /* UIViewExtension.swift in Sources */,
+				A8B148B819F901E40013C798 /* AFURLResponseSerialization.m in Sources */,
 				A869AB0E19F64154003FF45A /* HYBMusicManager.swift in Sources */,
+				A8B1488F19F8DDD90013C798 /* UIView+WebCacheOperation.m in Sources */,
 				A869AB2919F663DD003FF45A /* HYBProgressHUD.swift in Sources */,
 				A869AB2619F65A21003FF45A /* HYBParentTableController.swift in Sources */,
 				A869AAF419F6243D003FF45A /* HYBBaseController.swift in Sources */,
+				A8B1488219F8DDD90013C798 /* SDImageCache.m in Sources */,
+				A8B3A6A519FA1D830009AF0E /* HYBSongCell.swift in Sources */,
+				A8B3A67919F9ED360009AF0E /* HYBBaseModel.swift in Sources */,
+				A8B3A6AC19FA25AF0009AF0E /* HYBRefreshController.swift in Sources */,
+				A8B1488319F8DDD90013C798 /* SDWebImageCompat.m in Sources */,
+				A8B3A6A219FA1CE10009AF0E /* HYBSongListController.swift in Sources */,
+				A8B3A6A919FA23040009AF0E /* RefreshView.swift in Sources */,
+				A8B1488D19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m in Sources */,
+				A8B3A69619FA15CA0009AF0E /* FMDatabase.m in Sources */,
+				A8B3A69E19FA15CA0009AF0E /* NSObject+LKDBHelper.m in Sources */,
+				A8B1488819F8DDD90013C798 /* SDWebImagePrefetcher.m in Sources */,
+				A8B148B919F901E40013C798 /* AFURLSessionManager.m in Sources */,
+				A8B1488619F8DDD90013C798 /* SDWebImageDownloaderOperation.m in Sources */,
+				A8B1485A19F8D5760013C798 /* HYBLoadImageView.swift in Sources */,
+				A8B3A67619F9EA930009AF0E /* HYBSongListModel.swift in Sources */,
+				A8B3A67419F9E5100009AF0E /* Shorthand.swift in Sources */,
+				A8B1488519F8DDD90013C798 /* SDWebImageDownloader.m in Sources */,
+				A8B3A6B219FA37EC0009AF0E /* HYBPlaySongModel.swift in Sources */,
+				A8B1489619F8EEE00013C798 /* HYBSearchRequest.swift in Sources */,
+				A8B1488119F8DDD90013C798 /* NSData+ImageContentType.m in Sources */,
 				A869AB0919F63AD9003FF45A /* UIMaker.swift in Sources */,
 				A869AB1119F644A3003FF45A /* NSStringCommonExtension.swift in Sources */,
+				A8B3A69F19FA15CA0009AF0E /* NSObject+LKModel.m in Sources */,
+				A8B1488419F8DDD90013C798 /* SDWebImageDecoder.m in Sources */,
 				A869AB0319F62C37003FF45A /* GlobalDefine.swift in Sources */,
 				A835560119F61E010047F519 /* AppDelegate.swift in Sources */,
+				A8B148B719F901E40013C798 /* AFURLRequestSerialization.m in Sources */,
+				A8B1488E19F8DDD90013C798 /* UIImageView+WebCache.m in Sources */,
+				A8B3A6EF19FA40880009AF0E /* HYBSongLRCView.swift in Sources */,
+				A8B148B419F901E40013C798 /* AFNetworkReachabilityManager.m in Sources */,
+				A8B1488719F8DDD90013C798 /* SDWebImageManager.m in Sources */,
 				A869AB1F19F64983003FF45A /* HYBSearchController.swift in Sources */,
 				A869AB2219F649AE003FF45A /* HYBMyMusicController.swift in Sources */,
+				A8B1488019F8DDD90013C798 /* MKAnnotationView+WebCache.m in Sources */,
+				A8B3A69D19FA15CA0009AF0E /* LKDBUtils.m in Sources */,
+				A8B3A6B019FA31E00009AF0E /* HYBSongPlayController.swift in Sources */,
+				A8B148B119F901E40013C798 /* AFHTTPRequestOperation.m in Sources */,
+				A8B3A69C19FA15CA0009AF0E /* LKDBHelper.m in Sources */,
+				A8B148B319F901E40013C798 /* AFHTTPSessionManager.m in Sources */,
 				A869AB1619F648BD003FF45A /* HYBRootTabbarController.swift in Sources */,
+				A8B3A69719FA15CA0009AF0E /* FMDatabaseAdditions.m in Sources */,
+				A8B1488B19F8DDD90013C798 /* UIImage+MultiFormat.m in Sources */,
+				A8B1488C19F8DDD90013C798 /* UIImage+WebP.m in Sources */,
+				A8B3A69819FA15CA0009AF0E /* FMDatabasePool.m in Sources */,
+				A8B3A69A19FA15CA0009AF0E /* FMResultSet.m in Sources */,
+				A8B1488919F8DDD90013C798 /* UIButton+WebCache.m in Sources */,
 				A869AB1C19F64957003FF45A /* HYBTudouController.swift in Sources */,
+				A8B1482419F8B8920013C798 /* HYBSingerModel.swift in Sources */,
+				A8B1485719F8D40C0013C798 /* StyledTableViewCell.m in Sources */,
+				A8B3A69919FA15CA0009AF0E /* FMDatabaseQueue.m in Sources */,
+				A8B148B519F901E40013C798 /* AFSecurityPolicy.m in Sources */,
+				A8B148B219F901E40013C798 /* AFHTTPRequestOperationManager.m in Sources */,
+				A8B3A69519FA15CA0009AF0E /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				A8B3A6F119FA40BD0009AF0E /* HYBAudioPlayView.swift in Sources */,
+				A8B3A69B19FA15CA0009AF0E /* LKDB+Mapping.m in Sources */,
+				A8B148B619F901E40013C798 /* AFURLConnectionOperation.m in Sources */,
+				A8B1489B19F8F37D0013C798 /* Server.swift in Sources */,
+				A8B1485119F8D2360013C798 /* HYBSingerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,9 +1082,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = BiaoGeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
 			};
 			name = Debug;
 		};
@@ -579,9 +1099,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = BiaoGeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
 			};
 			name = Release;
 		};
