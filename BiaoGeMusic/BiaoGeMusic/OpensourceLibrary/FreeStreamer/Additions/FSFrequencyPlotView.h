@@ -7,6 +7,7 @@
  */
 
 #include "FSFrequencyDomainAnalyzer.h"
+#import <UIKit/UIKit.h>
 
 #define kFSFrequencyPlotViewMaxCount 64
 

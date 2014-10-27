@@ -15,6 +15,7 @@
 #include "input_stream.h"
 
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 40000)
 #import <AudioToolbox/AudioToolbox.h>

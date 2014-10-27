@@ -7,7 +7,7 @@
  */
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 #include <libxml/parser.h>
 
 /**
