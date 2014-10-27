@@ -14,4 +14,7 @@
 #import "UIImageView+Webcache.h"
 #import "AFNetworking.h"
 #import "FSAudioStream.h"
+#import "AudioPlayer.h"
+#import "FSPlaylistItem.h"
+
 #endif

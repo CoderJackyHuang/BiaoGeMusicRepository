@@ -114,4 +114,16 @@ class HYBSongListController: HYBRefreshController {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var songModel = self.songListModel?.songList.objectAtIndex(indexPath.row) as? HYBSongModel
+        
+        var musicPlayController = HYBSongPlayController.sharedMusicPlayController()
+        musicPlayController.songModel = songModel
+        musicPlayController.songListModelArray = self.songListModel!.songList
+        musicPlayController.currentIndex = indexPath.row
+        
+        musicPlayController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(musicPlayController, animated: true)
+    }
 }

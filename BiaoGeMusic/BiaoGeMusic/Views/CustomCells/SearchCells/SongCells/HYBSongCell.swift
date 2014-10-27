@@ -22,7 +22,7 @@ class HYBSongCell: StyledTableViewCell {
     func configureCell(model: HYBSongModel) {
         nameLabel.text = model.title
         titleLabel.text = "\(model.author)•\(model.album_title)"
-        timeLabel.text = String.time(fromSeconds: model.file_duration)
+        timeLabel.text = String.time(fromSeconds: model.file_duration.integerValue)
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

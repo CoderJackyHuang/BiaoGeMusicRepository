@@ -26,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func requestSongerInfoToDb(index: Int = 1025) {
         // 当数据库中没有数据时，请打开这里，当请求到的数据都写入到数据后，请关闭这里
-        return
-        
         var path = "/v1/restserver/ting?from=android&version=2.4.0&method=baidu.ting.artist.getinfo&format=json&tinguid=\(index)"
         
         HYBBaseRequest.singerInfo(path, succss: { (singerModel) -> Void in

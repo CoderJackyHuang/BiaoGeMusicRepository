@@ -9,6 +9,16 @@
 import Foundation
 
 ///
+/// 播放状态改变通知
+///
+let kHYBAudioPlayViewStatusNotifiation = "kHYBAudioPlayViewStatusNotifiation"
+
+///
+/// 更新歌曲信息通知
+///
+let kHYBAudioPlayViewUpdateSongInformationNotification = "kHYBAudioPlayViewUpdateSongInformationNotification"
+
+///
 /// @brief 音乐文件管理器类
 /// @author huangyibiao
 class HYBMusicManager {

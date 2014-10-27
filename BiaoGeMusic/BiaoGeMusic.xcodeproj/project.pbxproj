@@ -58,8 +58,8 @@
 		A8B148B719F901E40013C798 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148AC19F901E40013C798 /* AFURLRequestSerialization.m */; };
 		A8B148B819F901E40013C798 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148AE19F901E40013C798 /* AFURLResponseSerialization.m */; };
 		A8B148B919F901E40013C798 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B148B019F901E40013C798 /* AFURLSessionManager.m */; };
-		A8B2DBAC19FDCF9800392542 /* audio_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8619FDCF9800392542 /* audio_queue.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A8B2DBAD19FDCF9800392542 /* audio_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8819FDCF9800392542 /* audio_stream.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8B2DBAC19FDCF9800392542 /* audio_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8619FDCF9800392542 /* audio_queue.cpp */; };
+		A8B2DBAD19FDCF9800392542 /* audio_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8819FDCF9800392542 /* audio_stream.cpp */; };
 		A8B2DBAE19FDCF9800392542 /* caching_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8A19FDCF9800392542 /* caching_stream.cpp */; };
 		A8B2DBAF19FDCF9800392542 /* file_output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8C19FDCF9800392542 /* file_output.cpp */; };
 		A8B2DBB019FDCF9800392542 /* file_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DB8E19FDCF9800392542 /* file_stream.cpp */; };
@@ -76,6 +76,13 @@
 		A8B2DBEE19FDD2FD00392542 /* FSPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBE619FDD2FD00392542 /* FSPlaylistItem.m */; };
 		A8B2DBEF19FDD2FD00392542 /* FSXMLHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBE819FDD2FD00392542 /* FSXMLHttpRequest.m */; };
 		A8B2DBF019FDD53D00392542 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6F819FA5E910009AF0E /* libxml2.dylib */; };
+		A8B2DC0019FE013C00392542 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBF319FE013C00392542 /* AudioPlayer.m */; };
+		A8B2DC0119FE013C00392542 /* AutoRecoveringHttpDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBF519FE013C00392542 /* AutoRecoveringHttpDataSource.m */; };
+		A8B2DC0219FE013C00392542 /* CoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBF719FE013C00392542 /* CoreFoundationDataSource.m */; };
+		A8B2DC0319FE013C00392542 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBF919FE013C00392542 /* DataSource.m */; };
+		A8B2DC0419FE013C00392542 /* DataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBFB19FE013C00392542 /* DataSourceWrapper.m */; };
+		A8B2DC0519FE013C00392542 /* HttpDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBFD19FE013C00392542 /* HttpDataSource.m */; };
+		A8B2DC0619FE013C00392542 /* LocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2DBFF19FE013C00392542 /* LocalFileDataSource.m */; };
 		A8B3A67419F9E5100009AF0E /* Shorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67319F9E5100009AF0E /* Shorthand.swift */; };
 		A8B3A67619F9EA930009AF0E /* HYBSongListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67519F9EA930009AF0E /* HYBSongListModel.swift */; };
 		A8B3A67919F9ED360009AF0E /* HYBBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3A67819F9ED360009AF0E /* HYBBaseModel.swift */; };
@@ -242,6 +249,20 @@
 		A8B2DBE619FDD2FD00392542 /* FSPlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPlaylistItem.m; sourceTree = "<group>"; };
 		A8B2DBE719FDD2FD00392542 /* FSXMLHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSXMLHttpRequest.h; sourceTree = "<group>"; };
 		A8B2DBE819FDD2FD00392542 /* FSXMLHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSXMLHttpRequest.m; sourceTree = "<group>"; };
+		A8B2DBF219FE013C00392542 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		A8B2DBF319FE013C00392542 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		A8B2DBF419FE013C00392542 /* AutoRecoveringHttpDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoRecoveringHttpDataSource.h; sourceTree = "<group>"; };
+		A8B2DBF519FE013C00392542 /* AutoRecoveringHttpDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoRecoveringHttpDataSource.m; sourceTree = "<group>"; };
+		A8B2DBF619FE013C00392542 /* CoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFoundationDataSource.h; sourceTree = "<group>"; };
+		A8B2DBF719FE013C00392542 /* CoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreFoundationDataSource.m; sourceTree = "<group>"; };
+		A8B2DBF819FE013C00392542 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		A8B2DBF919FE013C00392542 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		A8B2DBFA19FE013C00392542 /* DataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceWrapper.h; sourceTree = "<group>"; };
+		A8B2DBFB19FE013C00392542 /* DataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceWrapper.m; sourceTree = "<group>"; };
+		A8B2DBFC19FE013C00392542 /* HttpDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDataSource.h; sourceTree = "<group>"; };
+		A8B2DBFD19FE013C00392542 /* HttpDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpDataSource.m; sourceTree = "<group>"; };
+		A8B2DBFE19FE013C00392542 /* LocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileDataSource.h; sourceTree = "<group>"; };
+		A8B2DBFF19FE013C00392542 /* LocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFileDataSource.m; sourceTree = "<group>"; };
 		A8B3A67319F9E5100009AF0E /* Shorthand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shorthand.swift; sourceTree = "<group>"; };
 		A8B3A67519F9EA930009AF0E /* HYBSongListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBSongListModel.swift; path = Models/SearchModels/HYBSongListModel.swift; sourceTree = "<group>"; };
 		A8B3A67819F9ED360009AF0E /* HYBBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYBBaseModel.swift; path = Models/BaseModels/HYBBaseModel.swift; sourceTree = "<group>"; };
@@ -380,6 +401,7 @@
 		A869AAEB19F62318003FF45A /* OpensourceLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A8B2DBF119FE013C00392542 /* AudioPlayer */,
 				A8B2DB7F19FDCF9800392542 /* FreeStreamer */,
 				A8B3A67A19FA15CA0009AF0E /* LKDBHelper2.0 */,
 				A8B1489D19F901E40013C798 /* AFNetworking */,
@@ -833,6 +855,28 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A8B2DBF119FE013C00392542 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A8B2DBF219FE013C00392542 /* AudioPlayer.h */,
+				A8B2DBF319FE013C00392542 /* AudioPlayer.m */,
+				A8B2DBF419FE013C00392542 /* AutoRecoveringHttpDataSource.h */,
+				A8B2DBF519FE013C00392542 /* AutoRecoveringHttpDataSource.m */,
+				A8B2DBF619FE013C00392542 /* CoreFoundationDataSource.h */,
+				A8B2DBF719FE013C00392542 /* CoreFoundationDataSource.m */,
+				A8B2DBF819FE013C00392542 /* DataSource.h */,
+				A8B2DBF919FE013C00392542 /* DataSource.m */,
+				A8B2DBFA19FE013C00392542 /* DataSourceWrapper.h */,
+				A8B2DBFB19FE013C00392542 /* DataSourceWrapper.m */,
+				A8B2DBFC19FE013C00392542 /* HttpDataSource.h */,
+				A8B2DBFD19FE013C00392542 /* HttpDataSource.m */,
+				A8B2DBFE19FE013C00392542 /* LocalFileDataSource.h */,
+				A8B2DBFF19FE013C00392542 /* LocalFileDataSource.m */,
+			);
+			name = AudioPlayer;
+			path = OpensourceLibrary/AudioPlayer;
+			sourceTree = "<group>";
+		};
 		A8B3A67719F9ED230009AF0E /* BaseModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,6 +1099,8 @@
 				A8B1488F19F8DDD90013C798 /* UIView+WebCacheOperation.m in Sources */,
 				A869AB2919F663DD003FF45A /* HYBProgressHUD.swift in Sources */,
 				A869AB2619F65A21003FF45A /* HYBParentTableController.swift in Sources */,
+				A8B2DC0519FE013C00392542 /* HttpDataSource.m in Sources */,
+				A8B2DC0619FE013C00392542 /* LocalFileDataSource.m in Sources */,
 				A869AAF419F6243D003FF45A /* HYBBaseController.swift in Sources */,
 				A8B1488219F8DDD90013C798 /* SDImageCache.m in Sources */,
 				A8B3A6A519FA1D830009AF0E /* HYBSongCell.swift in Sources */,
@@ -1064,6 +1110,7 @@
 				A8B3A6A219FA1CE10009AF0E /* HYBSongListController.swift in Sources */,
 				A8B3A6A919FA23040009AF0E /* RefreshView.swift in Sources */,
 				A8B1488D19F8DDD90013C798 /* UIImageView+HighlightedWebCache.m in Sources */,
+				A8B2DC0019FE013C00392542 /* AudioPlayer.m in Sources */,
 				A8B2DBEA19FDD2FD00392542 /* FSAudioStream.mm in Sources */,
 				A8B3A69619FA15CA0009AF0E /* FMDatabase.m in Sources */,
 				A8B3A69E19FA15CA0009AF0E /* NSObject+LKDBHelper.m in Sources */,
@@ -1091,6 +1138,7 @@
 				A8B148B719F901E40013C798 /* AFURLRequestSerialization.m in Sources */,
 				A8B1488E19F8DDD90013C798 /* UIImageView+WebCache.m in Sources */,
 				A8B3A6EF19FA40880009AF0E /* HYBSongLRCView.swift in Sources */,
+				A8B2DC0219FE013C00392542 /* CoreFoundationDataSource.m in Sources */,
 				A8B148B419F901E40013C798 /* AFNetworkReachabilityManager.m in Sources */,
 				A8B1488719F8DDD90013C798 /* SDWebImageManager.m in Sources */,
 				A869AB1F19F64983003FF45A /* HYBSearchController.swift in Sources */,
@@ -1100,6 +1148,7 @@
 				A8B2DBEC19FDD2FD00392542 /* FSParsePlaylistRequest.m in Sources */,
 				A8B3A6B019FA31E00009AF0E /* HYBSongPlayController.swift in Sources */,
 				A8B2DBB219FDCF9800392542 /* id3_parser.cpp in Sources */,
+				A8B2DC0419FE013C00392542 /* DataSourceWrapper.m in Sources */,
 				A8B148B119F901E40013C798 /* AFHTTPRequestOperation.m in Sources */,
 				A8B3A69C19FA15CA0009AF0E /* LKDBHelper.m in Sources */,
 				A8B148B319F901E40013C798 /* AFHTTPSessionManager.m in Sources */,
@@ -1109,6 +1158,7 @@
 				A8B1488B19F8DDD90013C798 /* UIImage+MultiFormat.m in Sources */,
 				A8B2DBEF19FDD2FD00392542 /* FSXMLHttpRequest.m in Sources */,
 				A8B2DBAD19FDCF9800392542 /* audio_stream.cpp in Sources */,
+				A8B2DC0119FE013C00392542 /* AutoRecoveringHttpDataSource.m in Sources */,
 				A8B1488C19F8DDD90013C798 /* UIImage+WebP.m in Sources */,
 				A8B3A69819FA15CA0009AF0E /* FMDatabasePool.m in Sources */,
 				A8B3A69A19FA15CA0009AF0E /* FMResultSet.m in Sources */,
@@ -1118,6 +1168,7 @@
 				A8B1485719F8D40C0013C798 /* StyledTableViewCell.m in Sources */,
 				A8B2DBE919FDD2FD00392542 /* FSAudioController.m in Sources */,
 				A8B2DBAC19FDCF9800392542 /* audio_queue.cpp in Sources */,
+				A8B2DC0319FE013C00392542 /* DataSource.m in Sources */,
 				A8B2DBBC19FDCF9800392542 /* Reachability.m in Sources */,
 				A8B3A69919FA15CA0009AF0E /* FMDatabaseQueue.m in Sources */,
 				A8B148B519F901E40013C798 /* AFSecurityPolicy.m in Sources */,
@@ -1233,14 +1284,10 @@
 		A835561B19F61E010047F519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					Starndard,
-					"(armv7,",
-					"armv7s)",
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Applications/Xcode\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
@@ -1249,8 +1296,10 @@
 				INFOPLIST_FILE = BiaoGeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
@@ -1258,14 +1307,10 @@
 		A835561C19F61E010047F519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					Starndard,
-					"(armv7,",
-					"armv7s)",
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Applications/Xcode\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
@@ -1274,8 +1319,10 @@
 				INFOPLIST_FILE = BiaoGeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
