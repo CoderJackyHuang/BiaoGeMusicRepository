@@ -28,17 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 当数据库中没有数据时，请打开这里，当请求到的数据都写入到数据后，请关闭这里
         var path = "/v1/restserver/ting?from=android&version=2.4.0&method=baidu.ting.artist.getinfo&format=json&tinguid=\(index)"
         
-        HYBBaseRequest.singerInfo(path, succss: { (singerModel) -> Void in
-            if let model = singerModel {
-                HYBSingerModel.insertToDB(model)
-            }
-            
-            if index < 136085621 {
-               self.requestSongerInfoToDb(index: index + 1)
-            }
-            }) { (error) -> Void in
-                
-        }
+//        HYBBaseRequest.singerInfo(path, success: { (singerModel) -> Void in
+//            if let model = singerModel {
+//                HYBSingerModel.insertToDB(model)
+//            }
+//            
+//            if index < 136085621 {
+//                self.requestSongerInfoToDb(index: index + 1)
+//            }
+//        }) fail: { (error) -> Void in
+//            
+//        }
     }
     
     func applicationWillResignActive(application: UIApplication) {

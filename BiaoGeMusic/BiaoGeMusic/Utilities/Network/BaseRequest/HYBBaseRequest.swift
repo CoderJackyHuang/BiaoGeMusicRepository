@@ -17,6 +17,10 @@ typealias failCloser = (error: NSError?) ->Void
 ///
 /// 作者：huangyibiao
 class HYBBaseRequest: NSObject {
+    struct BaseURL {
+        static var baseURL: String = kServerBase
+    }
+    
     ///
     /// 描述：解析JSON数据
     ///
@@ -47,11 +51,30 @@ class HYBBaseRequest: NSObject {
         return op
     }
     
+    class func downloadFile(serverPath: String, success: requestSuccessCloser, fail: failCloser) ->AFHTTPRequestOperation {
+        var op =  AFHTTPRequestOperation(request: NSURLRequest(URL: NSURL(string: String(format: "%@%@", kServeBase1, serverPath))))
+        op.setCompletionBlockWithSuccess({ (requestOp, responseObject) -> Void in
+            success(responseObject: responseObject)
+        }, failure: { (requestOP, error) -> Void in
+            fail(error: error)
+        })
+        op.start()
+        return op
+    }
+    
     ///
     /// 私有方法区
     ///
-    class func manager() ->AFHTTPRequestOperationManager {
-        var manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: kServerBase))
+    private  class func manager() ->AFHTTPRequestOperationManager {
+        var manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: BaseURL.baseURL))
+        
+        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Accept")
+        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "content-type")
+        manager.requestSerializer.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
+        manager.requestSerializer.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+
+        // 设置响应头支持的格式
+        manager.responseSerializer.acceptableContentTypes = NSSet(array: ["application/json", "application/javascript", "application/lrc", "application/x-www-form-urlencoded"])
         return manager
     }
 }

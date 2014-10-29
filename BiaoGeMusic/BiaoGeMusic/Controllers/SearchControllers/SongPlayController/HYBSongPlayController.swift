@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 ///
 /// 描述：歌曲播放界面
@@ -46,7 +47,7 @@ class HYBSongPlayController: HYBBaseController, HYBAudioPlayViewDelegate {
         self.view.addSubview(audioPlayView!)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "applicationDidEnterBackgroundAudioPlayViewUpdateSongInformationNotification",
+            selector: "applicationDidEnterBackgroundAudioPlayViewUpdateSongInformationNotification:",
             name: kHYBAudioPlayViewUpdateSongInformationNotification,
             object: nil)
     }
@@ -74,15 +75,108 @@ class HYBSongPlayController: HYBBaseController, HYBAudioPlayViewDelegate {
     ///
     /// 参数：songModel 歌曲数据模型
     func playMusic(#songModel: HYBSongModel) {
-       self.isCurrentPlaying = !self.isCurrentPlaying
+        self.isCurrentPlaying = !self.isCurrentPlaying
+        self.songModel = songModel
         
- 
+        var path = "/data/music/links?songIds=\(songModel.song_id)"
+        HYBBaseRequest.songInfo(path, success: { (playSongModel) -> Void in
+            if playSongModel != nil {
+                self.addTitleView(title: playSongModel!.songName)
+                
+                self.audioPlayView?.songModel = self.songModel
+                self.audioPlayView?.playingSongModel = playSongModel
+                self.audioPlayView?.updateLRC()
+                HYBMusicManager.sharedInstance().isPlaying = true
+                self.currentSongModel = playSongModel
+                
+                // 设置播放项
+                var item = FSPlaylistItem()
+                item.title = playSongModel!.songName
+                item.url = playSongModel!.songLink
+                self.audioPlayView?.setPlaylistItem(item)
+                
+                if HYBMusicManager.sharedInstance().isApplicationEnterBackground {
+                    
+                }
+            } else {
+                HYBProgressHUD.showError("歌词加载失败")
+            }
+            }) { (error) -> Void in
+                HYBProgressHUD.showError("歌词加载失败")
+        }
+    }
+    
+    ///
+    ///
+    ///
+    
+    ///
+    /// 描述：进入后台播放通知
+    func applicationDidEnterBackgroundAudioPlayViewUpdateSongInformationNotification(sender: NSNotification) {
+        if (NSClassFromString("MPNowPlayingInfoCenter") != nil) {
+           
+        }
     }
     
     ///
     /// HYBAudioPlayViewDelegate
     ///
     func audioPlayView(audioView: HYBAudioPlayView, didClickStopAtIndex modelIndex: NSInteger) {
+        var model: HYBSongModel? = nil
         
+        switch (modelIndex) {
+        case 0: // 顺序
+            currentIndex += 1
+            if currentIndex >= songListModelArray.count {
+                currentIndex = 0
+            }
+            model = songListModelArray[currentIndex] as? HYBSongModel
+            if model != nil {
+                playMusic(songModel: model!)
+            }
+            break
+        case 1: // 随机
+            var number = arc4random() % UInt32(songListModelArray.count)
+            model = songListModelArray[Int(number)] as? HYBSongModel
+            if model != nil {
+                playMusic(songModel: model!)
+            }
+            break
+        default: // 单曲循环
+            model = self.songModel
+            if model != nil {
+                playMusic(songModel: model!)
+            }
+        }
+    }
+    
+    func audioPlayView(audioView: HYBAudioPlayView, didClickPlayButton button: UIButton) {
+        playMusic(songModel: self.songModel!)
+    }
+    
+    func audioPlayView(audioView: HYBAudioPlayView, didClickNextButton button: UIButton) {
+        if songListModelArray.count != 0 {
+            currentIndex++;
+            if currentIndex == songListModelArray.count {
+                currentIndex = currentIndex - 1
+            }
+           var model = songListModelArray[currentIndex] as? HYBSongModel
+            if model != nil {
+                playMusic(songModel: model!)
+            }
+        }
+    }
+    
+    func audioPlayView(audioView: HYBAudioPlayView, didClickPreviousButton button: UIButton) {
+        if songListModelArray.count != 0 {
+            currentIndex--;
+            if currentIndex < 0 {
+                currentIndex = 0
+            }
+            var model = songListModelArray[currentIndex] as? HYBSongModel
+            if model != nil {
+                playMusic(songModel: model!)
+            }
+        }
     }
 }

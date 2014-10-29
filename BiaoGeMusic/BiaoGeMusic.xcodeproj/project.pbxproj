@@ -1298,6 +1298,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "febdfb22-aa92-497f-8f0c-bea4a73f9a6f";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1321,6 +1322,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "febdfb22-aa92-497f-8f0c-bea4a73f9a6f";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiaoGeMusic/Swift-ObjectiveC-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "armv7 armv7s";

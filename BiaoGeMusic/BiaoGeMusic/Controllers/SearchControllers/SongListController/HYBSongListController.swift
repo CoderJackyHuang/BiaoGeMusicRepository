@@ -53,7 +53,7 @@ class HYBSongListController: HYBRefreshController {
         var path = "/v1/restserver/ting?from=android&version=2.4.0&method=baidu.ting.artist.getSongList&format=json&order=2&tinguid=\(self.singerModel.ting_uid)&offset=0&limits=\(self.totalSongs)"
         HYBProgressHUD.show(kLoadingMsg)
         self.refreshView?.startLoadingMore()
-        request = HYBBaseRequest.songList(path, succss: { (songListModels) -> Void in
+        request = HYBBaseRequest.songList(path, success: { (songListModels) -> Void in
             if songListModels != nil {
                 self.songListModel = songListModels
                 self.tableView?.reloadData()

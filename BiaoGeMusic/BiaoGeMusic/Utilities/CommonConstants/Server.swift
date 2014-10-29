@@ -10,3 +10,4 @@ import Foundation
 
 // 服务器基础路径
 let kServerBase = "http://tingapi.ting.baidu.com"
+let kServeBase1 = "http://ting.baidu.com"

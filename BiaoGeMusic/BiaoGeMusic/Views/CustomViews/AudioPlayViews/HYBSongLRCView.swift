@@ -131,7 +131,7 @@ class HYBSongLRCView: UIView {
             var tempString = array[i] as NSString
             var lineArray = tempString.componentsSeparatedByString("]")
             
-            for var j = 0; j < lineArray.count; j++ {
+            for var j = 0; j < lineArray.count - 1; j++ {
                 var line = lineArray[j] as NSString
                 
                 if line.length > 8 {
@@ -157,14 +157,16 @@ class HYBSongLRCView: UIView {
     /// 参数：array 要进行冒泡排序的数组
     private func bubbleSortLrcLines(array: NSMutableArray) {
         for var i = 0; i < array.count; i++ {
-            for var j = array.count - 1; j >= i; j-- {
-                var firstValue = self.timeToFloat(array[j] as NSString)
-                var secondValue = self.timeToFloat(array[j - 1] as NSString)
+            var firstValue = self.timeToFloat(array[i] as NSString)
+            
+            for var j = i + 1; j < array.count; j++ {
+                var secondValue = self.timeToFloat(self.keyArray[j] as NSString)
                 
                 if firstValue < secondValue {
-                    array.exchangeObjectAtIndex(j - 1, withObjectAtIndex: j)
-                    self.titleArray.exchangeObjectAtIndex(j - 1, withObjectAtIndex: j)
+                    array.exchangeObjectAtIndex(i, withObjectAtIndex: j)
+                    self.titleArray.exchangeObjectAtIndex(i, withObjectAtIndex: j)
                 }
+                
             }
         }
     }
@@ -175,8 +177,12 @@ class HYBSongLRCView: UIView {
     /// 参数：time 时间字符串，格式为："05:11"
     private func timeToFloat(time: NSString) ->float_t {
         var array = time.componentsSeparatedByString(":")
-        var result: NSString = "\(array[0]).\(array[1])"
         
+        var result: NSString = "\(array[0])"
+        if array.count >= 2 {
+            result = "\(array[0]).\(array[1])"
+        }
+
         return result.floatValue
     }
     

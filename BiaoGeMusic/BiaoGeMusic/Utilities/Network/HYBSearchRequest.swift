@@ -18,7 +18,7 @@ extension HYBBaseRequest  {
     ///
     /// 方式：GET请求
     typealias singerInfoSuccess = (singerModel: HYBSingerModel?) -> Void
-    class func singerInfo(path: String, succss: singerInfoSuccess, fail: failCloser) -> AFHTTPRequestOperation {
+    class func singerInfo(path: String, success: singerInfoSuccess, fail: failCloser) -> AFHTTPRequestOperation {
         var op = GETRequest(path,
             success: { (responseObject) -> Void in // 请求成功，解析数据
                 dispatch_async(kGlobalThread, { () -> Void in
@@ -32,11 +32,11 @@ extension HYBBaseRequest  {
                         singerModel.parse(dict!)
                         
                         dispatch_async(kMainThread, { () -> Void in
-                            succss(singerModel: singerModel)
+                            success(singerModel: singerModel)
                         })
                     } else { // 解析失败
                         dispatch_async(kMainThread, { () -> Void in
-                            succss(singerModel: nil)
+                            success(singerModel: nil)
                         })
                     }
                 })
@@ -52,7 +52,7 @@ extension HYBBaseRequest  {
     ///
     /// 方式：GET请求
     typealias songListSuccess = (songListModels: HYBSongListModel?) -> Void
-    class func songList(path: String, succss: songListSuccess, fail: failCloser) -> AFHTTPRequestOperation {
+    class func songList(path: String, success: songListSuccess, fail: failCloser) -> AFHTTPRequestOperation {
         var op = GETRequest(path,
             success: { (responseObject) -> Void in // 请求成功，解析数据
                 dispatch_async(kGlobalThread, { () -> Void in
@@ -78,13 +78,69 @@ extension HYBBaseRequest  {
                         
                         isSuccess = true
                         dispatch_async(kMainThread, { () -> Void in
-                            succss(songListModels: songListModel)
+                            success(songListModels: songListModel)
                         })
                     }
                     
                     if !isSuccess {
                         dispatch_async(kMainThread, { () -> Void in
-                            succss(songListModels: nil)
+                            success(songListModels: nil)
+                        })
+                    }
+                })
+            }) { (error) -> Void in             // 请求失败，处理失败
+                fail(error: error)
+        }
+        
+        return op
+    }
+    
+    ///
+    /// 描述：获取歌曲详情信息
+    ///
+    /// 方式：GET请求
+    typealias songInfoSuccess = (playSongModel: HYBPlaySongModel?) -> Void
+    class func songInfo(path: String, success: songInfoSuccess, fail: failCloser) -> AFHTTPRequestOperation {
+        self.BaseURL.baseURL = kServeBase1
+        var op = GETRequest(path,
+            success: { (responseObject) -> Void in // 请求成功，解析数据
+                dispatch_async(kGlobalThread, { () -> Void in
+                    // 解析数据
+                    var dict = self.parseJSON(jsonObject: responseObject)
+                    
+                    var isSuccess = (dict != nil)
+                    // 处理数据
+                    if dict != nil {
+                        var data = dict?["data"] as? NSDictionary
+                        if data != nil {
+                            var songList = data?["songList"] as? NSArray
+                            if songList != nil {
+                                for item in songList! {
+                                    if let itemDict = item as? NSDictionary {
+                                        var songModel = HYBPlaySongModel()
+                                        // 把数据填充到模型中
+                                        songModel.setValuesForKeysWithDictionary(itemDict)
+                                        
+                                        var range = songModel.songLink.rangeOfString("src");
+                                        if (range.location != NSNotFound && range.length != 0) {
+                                            songModel.songLink = songModel.songLink.substringToIndex(range.location-1)
+                                        }
+                                        
+                                        isSuccess = true
+                                        dispatch_async(kMainThread, { () -> Void in
+                                            success(playSongModel: songModel)
+                                        })
+                                        break
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                    if !isSuccess {
+                        dispatch_async(kMainThread, { () -> Void in
+                            success(playSongModel: nil)
                         })
                     }
                 })
@@ -101,15 +157,13 @@ extension HYBBaseRequest  {
     /// 方式：GET请求
     typealias songLRCSuccess = (success: Bool, storePathInDisk: String?) -> Void
     class func songLRC(path: String, ting_uid: Int, song_id: Int, succss: songLRCSuccess, fail: failCloser) -> AFHTTPRequestOperation {
-        var op = GETRequest(path,
+        self.BaseURL.baseURL = kServeBase1
+        var op = downloadFile(path,
             success: { (responseObject) -> Void in // 请求成功，解析数据
                 dispatch_async(kGlobalThread, { () -> Void in
-                    // 解析数据
-                    var dict = self.parseJSON(jsonObject: responseObject)
-                    
-                    var isSuccess = (dict == nil)
+                    var isSuccess = false
                     // 处理数据
-                    if dict != nil {
+                    if responseObject != nil {
                         // 建立ting_uid文件夹
                         var ting_uidPath = String.documentPath().stringByAppendingPathComponent(String(format: "%d", ting_uid))
                         if !NSFileManager.defaultManager().fileExistsAtPath(ting_uidPath) {
@@ -141,6 +195,8 @@ extension HYBBaseRequest  {
                                 attributes: nil) {
                                     isSuccess = true
                             }
+                        } else {
+                            isSuccess = true
                         }
                         
                         dispatch_async(kMainThread, { () -> Void in

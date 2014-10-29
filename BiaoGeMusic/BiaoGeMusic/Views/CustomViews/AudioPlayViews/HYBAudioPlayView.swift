@@ -36,15 +36,16 @@ import Foundation
     ///
     /// 描述：点击停止播放按钮的回调函数
     ///
-    /// 参数：audioView -- 播放视图  didClickStopAtIndex 需要停止播放的播放列表中的歌曲下标
-    optional func audioPlayView(audioView: HYBAudioPlayView, didClickStopAtIndex modelIndex: NSInteger)
+    /// 参数：audioView -- 播放视图  didClickStopAtIndex 播放模式 0表示顺序、1表示随机、2表示单曲
+    optional func audioPlayView(audioView: HYBAudioPlayView, didClickStopAtIndex modelIndex: Int)
 }
 
-// 播放模式
+///
+/// 描述：播放模式
 enum HYBPlaybackMode {
-   case OrderMode   // 顺序播放
-   case RandomMode  // 随机播放
-   case SingleMode  // 单曲播放
+    case OrderMode  // 顺序播放
+    case RandomMode // 随机播放
+    case SingleMode // 单曲播放
 }
 
 ///
@@ -84,6 +85,8 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     private var isPlaying = false
     private var progressTimer: NSTimer?
     private var playbackMode: HYBPlaybackMode = HYBPlaybackMode.OrderMode // 默认为顺序播放
+    private var playbackModeValue: Int = 0 // 默认为顺序播放
+    private var playlistItem: FSPlaylistItem?
     
     ///
     /// 生命周期函数
@@ -135,6 +138,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
         
         singerHeadImageView = HYBLoadImageView(frame: CGRectMake((self.width() - 64.0) / 2.0,
             self.height() - 64.0 - 10.0, 64, 64))
+        singerHeadImageView.isCircle = true
         self.addSubview(singerHeadImageView)
         
         // 播放按钮
@@ -189,7 +193,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     /// 描述：调用此方法来触发点击播放按钮，进行音乐播放
     func playMusic() {
         self.isPlaying = !self.isPlaying
-
+        
         switch (self.audioPlayer.state) {
             // 如果当前是暂停播放的状态，则开启继续播放
             // 并启动定时器
@@ -211,6 +215,30 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     }
     
     ///
+    /// 描述：指定播放的歌曲
+    func setPlaylistItem(item: FSPlaylistItem) {
+        if item != self.playlistItem {
+            playlistItem = item
+            
+            self .stopCurrentState()
+            var path = String.documentPath().stringByAppendingPathComponent(String(format: "%@/%@/%@.mp3",
+                songModel.ting_uid,
+                songModel.song_id,
+                songModel.song_id))
+            if NSFileManager.defaultManager().fileExistsAtPath(path) {
+                self.playlistItem?.url = "file://\(path)"
+                self.downloadButton.enabled = true
+            } else {
+                self.downloadButton.enabled = false
+            }
+            
+            self.totalPlaybackTimeLabel.text = String.time(fromSeconds: self.playingSongModel.time.integerValue)
+            startToPlayMusic()
+            startTimer()
+        }
+    }
+    
+    ///
     /// 描述：调用此方法来加载LRC歌曲
     func updateLRC() {
         // 更新歌手头像
@@ -226,22 +254,22 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
             if NSFileManager.defaultManager().fileExistsAtPath(path) {
                 lrcView.parseSong(path)
             } else {
-                HYBBaseRequest.songLRC(songModel.lrclink,
+                HYBBaseRequest.songLRC(playingSongModel.lrcLink,
                     ting_uid: songModel.ting_uid.integerValue,
                     song_id: songModel.song_id.integerValue,
                     succss: { (success, path) -> Void in
-                    if success {
-                        self.lrcView.parseSong(path!)
-                        self.hasLRC = true
-                    } else {
-                         self.noLRCLabel.text = "加载歌词失败"
+                        if success {
+                            self.lrcView.parseSong(path!)
+                            self.hasLRC = true
+                        } else {
+                            self.noLRCLabel.text = "加载歌词失败"
+                            self.hasLRC = false
+                        }
+                    }, fail: { (error) -> Void in
+                        self.noLRCLabel.text = "加载歌词失败"
+                        self.lrcView.removeAllSubviewsInScrollView()
+                        self.lrcView.clearLRCContents()
                         self.hasLRC = false
-                    }
-                }, fail: { (error) -> Void in
-                    self.noLRCLabel.text = "加载歌词失败"
-                    self.lrcView.removeAllSubviewsInScrollView()
-                    self.lrcView.clearLRCContents()
-                    self.hasLRC = false
                 })
             }
         }
@@ -281,19 +309,155 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     
     ///
     /// 描述：修改播放模式
-    private func onPlayModeButtonClicked(sender: UIButton) {
+    func onPlayModeButtonClicked(sender: UIButton) {
+        var name = ""
+        var title = ""
+        switch (self.playbackMode) {
+        case .OrderMode: // 当前是顺序播放，就切换成随机播放
+            name = "random"
+            title = "随机播放"
+            self.playbackModeValue = 1
+            break
+        case .RandomMode:// 当前是顺序播放，就切换成单曲播放
+            name = "lock"
+            title = "单曲播放"
+            self.playbackModeValue = 2
+            break
+        default:
+            name = "order"
+            title = "顺序播放"
+            self.playbackModeValue = 0
+            break
+        }
         
+        self.playModeButton.setImage(UIImage(named: name), forState: UIControlState.Normal)
+        HYBProgressHUD.showSuccess(title)
+    }
+    
+    ///
+    /// 描述：点击播放
+    func onPlayButtonClicked(sender: UIButton) {
+        self.playMusic()
+        
+        if self.isPlaying {
+            self.delegate?.audioPlayView?(self, didClickPlayButton: sender)
+        } else {
+            self.delegate?.audioPlayView?(self, didClickStopAtIndex: self.playbackModeValue)
+        }
+    }
+    
+    ///
+    /// 描述：播放前一首
+    func onPreviousButtonClicked(sender: UIButton) {
+        stopCurrentState()
+        
+        self.delegate?.audioPlayView?(self, didClickPreviousButton: sender)
+    }
+    
+    ///
+    /// 描述：播放下一首
+    func onNextButtonClicked(sender: UIButton) {
+        stopCurrentState()
+        
+        self.delegate?.audioPlayView?(self, didClickNextButton: sender)
+    }
+    
+    ///
+    /// 描述：播放列表
+    func onPlayListButtonClicked(sender: UIButton) {
+        self.delegate?.audioPlayView?(self, didClickNextButton: sender)
+    }
+    
+    ///
+    /// 描述：下载
+    func onDownloadButtonClicked(sender: UIButton) {
+        self.delegate?.audioPlayView?(self, didClickDownloadButton: sender)
+    }
+    
+    ///
+    /// 描述：收藏
+    func onCollectButtonClicked(sender: UIButton) {
+        
+    }
+    
+    ///
+    /// 描述：停止当前播放状态
+    private func stopCurrentState() {
+        self.downloadButton.enabled = false
+        self.isPlaying = false
+        self.audioPlayer.stop()
+        self.stopTimer()
+    }
+    
+    ///
+    /// 描述：更新控件状态
+    private func updateControls() {
+        switch (self.audioPlayer.state) {
+        case .Stopped:
+            if self.isPlaying {
+                self.delegate?.audioPlayView?(self, didClickStopAtIndex: self.playbackModeValue)
+            }
+            self.isPlaying = false
+            break
+        case .Playing:
+            self.isPlaying = true
+            break
+        default:
+            break
+        }
+        
+        
+        var imgName = (isPlaying == true ? "pasue" : "play")
+        playButton.setImage(UIImage(named: imgName), forState: UIControlState.Normal)
+        
+        imgName = (isPlaying == true ? "pasueHight" : "playHight")
+        playButton.setImage(UIImage(named: imgName), forState: UIControlState.Highlighted)
+    }
+    
+    ///
+    /// 描述：更新播放进度
+    func updatePlaybackProgress() {
+        println(self.audioPlayer.duration)
+        if self.audioPlayer.duration == 0.0 {
+            progressSlider.value = 0.0
+        } else {
+            progressSlider.minimumValue = 0.0
+            progressSlider.maximumValue = Float(audioPlayer.duration)
+            progressSlider.value = Float(audioPlayer.progress)
+            
+            currentPlaybackTimeLabel.text = String.time(fromSeconds: Int(audioPlayer.progress))
+            if self.noLRCLabel.text?.isEmpty == false {
+                lrcView.moveToLRCLine(time: String(format: "%@", currentPlaybackTimeLabel.text!))
+            }
+        }
+    }
+    
+    ///
+    /// 描述：开始播放
+    private func startToPlayMusic() {
+        self.audioPlayer.play(NSURL(string: self.playlistItem!.url))
+        
+        var animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.toValue = NSNumber(double: 2.0 * M_PI)
+        animation.duration = 1.5
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.cumulative = false
+        animation.removedOnCompletion = false
+        animation.repeatCount = FLT_MAX
+        singerHeadImageView.layer.addAnimation(animation, forKey: "AnimatedKey")
+        singerHeadImageView.layer.speed = 0.2
+        singerHeadImageView.layer.beginTime = 0.0
     }
     
     ///
     /// AudioPlayerDelegate
     ///
     func audioPlayer(audioPlayer: AudioPlayer!, didStartPlayingQueueItemId queueItemId: NSObject!) {
-        
+        updateControls()
     }
     
     func audioPlayer(audioPlayer: AudioPlayer!, didEncounterError errorCode: AudioPlayerErrorCode) {
-        
+        updateControls()
     }
     
     func audioPlayer(audioPlayer: AudioPlayer!,
@@ -301,15 +465,15 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
         withReason stopReason: AudioPlayerStopReason,
         andProgress progress: Double,
         andDuration duration: Double) {
-        
+            updateControls()
     }
     
     func audioPlayer(audioPlayer: AudioPlayer!, didFinishBufferingSourceWithQueueItemId queueItemId: NSObject!) {
-        
+        updateControls()
     }
     
     func audioPlayer(audioPlayer: AudioPlayer!, stateChanged state: AudioPlayerState) {
-        
+        updateControls()
     }
 }
 

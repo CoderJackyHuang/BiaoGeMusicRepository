@@ -13,15 +13,15 @@ import Foundation
 ///
 /// 作者： huangyibiao
 class HYBPlaySongModel: HYBBaseModel {
-    var queryId: Int = 0
-    var songId: Int = 0
-    var artistId: Int = 0
-    var albumId: Int = 0
-    var copyType: Int = 0
-    var time: Int = 0
-    var linkCode: Int = 0
-    var rate: Int = 0
-    var size: Int = 0
+    var queryId: NSString = "0"
+    var songId: NSString = "0"
+    var artistId: NSString = "0"
+    var albumId: NSString = "0"
+    var copyType: NSString = "0"
+    var time: NSString = "0"
+    var linkCode: NSString = "0"
+    var rate: NSString = "0"
+    var size: NSString = "0"
     
     var songName: NSString = ""
     var artistName: NSString = ""
