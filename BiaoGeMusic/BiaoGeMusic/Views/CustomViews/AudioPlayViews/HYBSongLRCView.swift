@@ -17,6 +17,7 @@ class HYBSongLRCView: UIView {
     private var keyArray = NSMutableArray()
     private var titleArray = NSMutableArray()
     private var lineLabelArray = NSMutableArray()
+    private var currentPlayingLineTime: float_t = 0.0
     
     ///
     /// 重写父类的方法
@@ -24,7 +25,7 @@ class HYBSongLRCView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.scrollView = UIScrollView(frame: self.bounds)
+        self.scrollView = UIScrollView(frame: CGRectMake(0, 10, self.width(), self.height() - 20))
         // 暂时关闭可交互功能
         self.scrollView.userInteractionEnabled = false
         self.addSubview(self.scrollView)
@@ -94,17 +95,18 @@ class HYBSongLRCView: UIView {
             for index = 0; index < self.keyArray.count; index++ {
                 if let lrcTime = self.keyArray[index] as? NSString {
                     var tmpTimeValue = self.timeToFloat(lrcTime)
-                    if tmpTimeValue == currentTimeValue {
+                    if fabs(tmpTimeValue - currentTimeValue) <= fabs(0.000000001) {
                         hasFound = true
+                        currentPlayingLineTime = tmpTimeValue
                         break
                     }
                 }
             }
             
-            if hasFound {
+            if hasFound || (!hasFound && currentPlayingLineTime < currentTimeValue) {
                 if index < self.lineLabelArray.count {
                     if let label = self.lineLabelArray[index] as? UILabel {
-                        label.textColor = kNavColor
+                        updateCurrentTimeLRC(label)
                         self.scrollView.setContentOffset(CGPointMake(0.0, 25.0 * CGFloat(index)),
                             animated: true)
                     }
@@ -162,7 +164,7 @@ class HYBSongLRCView: UIView {
             for var j = i + 1; j < array.count; j++ {
                 var secondValue = self.timeToFloat(self.keyArray[j] as NSString)
                 
-                if firstValue < secondValue {
+                if firstValue > secondValue {
                     array.exchangeObjectAtIndex(i, withObjectAtIndex: j)
                     self.titleArray.exchangeObjectAtIndex(i, withObjectAtIndex: j)
                 }
@@ -202,7 +204,23 @@ class HYBSongLRCView: UIView {
             label.font = UIFont.systemFontOfSize(14.0)
             
             scrollView.addSubview(label)
-            lineLabelArray.addObject(scrollView)
+            lineLabelArray.addObject(label)
+        }
+    }
+    
+    ///
+    /// 描述：更新当前显示的歌词
+    private func updateCurrentTimeLRC(currentLabel: UILabel) {
+        for label in self.lineLabelArray {
+            if let item = label as? UILabel {
+                if item == currentLabel {
+                    item.textColor = kNavColor
+                    item.font = UIFont.boldSystemFontOfSize(16.0)
+                } else {
+                    item.textColor = UIColor.lightGrayColor()
+                    item.font = UIFont.systemFontOfSize(14.0)
+                }
+            }
         }
     }
 }

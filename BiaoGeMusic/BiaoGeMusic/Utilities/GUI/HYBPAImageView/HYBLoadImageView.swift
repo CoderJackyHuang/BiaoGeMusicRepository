@@ -67,8 +67,10 @@ class HYBLoadImageView: UIImageView {
             self.sd_setImageWithURL(NSURL(string: url), placeholderImage: UIImage(named: placeholder), options: SDWebImageOptions.DelayPlaceholder, completed: { (image, error, cacheType, URL) -> Void in
                 if error != nil && errorPlaceholder != nil {
                     self.image = UIImage(named: errorPlaceholder!)
-                } else {
+                } else if image != nil {
                     self.image = image
+                } else {
+                    self.image = UIImage(named: placeholder)
                 }
             })
         } else {

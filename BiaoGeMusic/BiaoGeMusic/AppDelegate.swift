@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    ///
+    /// 本人借用他人开源代码提供的接口，因此没有一个好的接口获取到歌手数据，这里只能使用递归一个个获取并写入数据库后，
+    /// 才能进行后面的操作，所以大家在使用时，请先把下面的注释打开，等待请求完成所有数据后，才注释掉下面的代码
     private func requestSongerInfoToDb(index: Int = 1025) {
         // 当数据库中没有数据时，请打开这里，当请求到的数据都写入到数据后，请关闭这里
         var path = "/v1/restserver/ting?from=android&version=2.4.0&method=baidu.ting.artist.getinfo&format=json&tinguid=\(index)"

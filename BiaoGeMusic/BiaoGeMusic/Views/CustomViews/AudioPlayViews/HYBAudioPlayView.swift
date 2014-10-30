@@ -242,7 +242,10 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     /// 描述：调用此方法来加载LRC歌曲
     func updateLRC() {
         // 更新歌手头像
-        singerHeadImageView.setImageURL(playingSongModel.songPicBig)
+        println(playingSongModel.songPicBig)
+        // 由于 图片不是单纯链接，无法这样加载
+        singerHeadImageView.image = UIImage(named: "head_icon")
+       // singerHeadImageView.setImageURL(playingSongModel.songPicBig)
         
         if playingSongModel.lrcLink.length != 0 {
             noLRCLabel.text = ""
@@ -253,6 +256,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
                 songModel.song_id))
             if NSFileManager.defaultManager().fileExistsAtPath(path) {
                 lrcView.parseSong(path)
+                self.hasLRC = true
             } else {
                 HYBBaseRequest.songLRC(playingSongModel.lrcLink,
                     ting_uid: songModel.ting_uid.integerValue,
@@ -275,6 +279,11 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
         }
     }
     
+    ///
+    /// 描述：暂停播放
+    func pause() {
+        self.audioPlayer.pause()
+    }
     
     ///
     /// private 方法区
@@ -317,16 +326,19 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
             name = "random"
             title = "随机播放"
             self.playbackModeValue = 1
+            self.playbackMode = .RandomMode
             break
         case .RandomMode:// 当前是顺序播放，就切换成单曲播放
             name = "lock"
             title = "单曲播放"
             self.playbackModeValue = 2
+            self.playbackMode = .SingleMode
             break
         default:
             name = "order"
             title = "顺序播放"
             self.playbackModeValue = 0
+            self.playbackMode = .OrderMode
             break
         }
         
@@ -342,6 +354,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
         if self.isPlaying {
             self.delegate?.audioPlayView?(self, didClickPlayButton: sender)
         } else {
+            self.pause()
             self.delegate?.audioPlayView?(self, didClickStopAtIndex: self.playbackModeValue)
         }
     }
@@ -365,7 +378,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     ///
     /// 描述：播放列表
     func onPlayListButtonClicked(sender: UIButton) {
-        self.delegate?.audioPlayView?(self, didClickNextButton: sender)
+        // 暂不实现
     }
     
     ///
@@ -377,7 +390,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     ///
     /// 描述：收藏
     func onCollectButtonClicked(sender: UIButton) {
-        
+        // 暂不实现
     }
     
     ///
@@ -417,7 +430,6 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
     ///
     /// 描述：更新播放进度
     func updatePlaybackProgress() {
-        println(self.audioPlayer.duration)
         if self.audioPlayer.duration == 0.0 {
             progressSlider.value = 0.0
         } else {
@@ -426,7 +438,7 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
             progressSlider.value = Float(audioPlayer.progress)
             
             currentPlaybackTimeLabel.text = String.time(fromSeconds: Int(audioPlayer.progress))
-            if self.noLRCLabel.text?.isEmpty == false {
+            if self.hasLRC {
                 lrcView.moveToLRCLine(time: String(format: "%@", currentPlaybackTimeLabel.text!))
             }
         }
@@ -447,6 +459,8 @@ class HYBAudioPlayView: UIView, AudioPlayerDelegate {
         singerHeadImageView.layer.addAnimation(animation, forKey: "AnimatedKey")
         singerHeadImageView.layer.speed = 0.2
         singerHeadImageView.layer.beginTime = 0.0
+        singerHeadImageView.image = UIImage(named: "head_icon")
+        //singerHeadImageView.setImageURL(playingSongModel.songPicBig, placeholder: "headerImage")
     }
     
     ///

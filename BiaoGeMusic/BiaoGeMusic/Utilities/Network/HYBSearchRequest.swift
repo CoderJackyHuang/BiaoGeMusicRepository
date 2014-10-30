@@ -126,6 +126,11 @@ extension HYBBaseRequest  {
                                             songModel.songLink = songModel.songLink.substringToIndex(range.location-1)
                                         }
                                         
+                                        var array = songModel.songPicBig.componentsSeparatedByString("/item/")
+                                        if array.count >= 2 {
+                                            songModel.songPicBig = array.last as NSString
+                                        }
+                                        
                                         isSuccess = true
                                         dispatch_async(kMainThread, { () -> Void in
                                             success(playSongModel: songModel)

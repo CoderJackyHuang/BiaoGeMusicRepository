@@ -60,6 +60,22 @@ class HYBSongPlayController: HYBBaseController, HYBAudioPlayViewDelegate {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if HYBMusicManager.sharedInstance().isPlaying {
+            if self.songModel != nil {
+                self.playMusic(songModel: self.songModel!)
+            }
+        }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.audioPlayView?.pause()
+    }
+    
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self,
             name: kHYBAudioPlayViewUpdateSongInformationNotification,
@@ -124,30 +140,31 @@ class HYBSongPlayController: HYBBaseController, HYBAudioPlayViewDelegate {
     func audioPlayView(audioView: HYBAudioPlayView, didClickStopAtIndex modelIndex: NSInteger) {
         var model: HYBSongModel? = nil
         
-        switch (modelIndex) {
-        case 0: // 顺序
-            currentIndex += 1
-            if currentIndex >= songListModelArray.count {
-                currentIndex = 0
-            }
-            model = songListModelArray[currentIndex] as? HYBSongModel
-            if model != nil {
-                playMusic(songModel: model!)
-            }
-            break
-        case 1: // 随机
-            var number = arc4random() % UInt32(songListModelArray.count)
-            model = songListModelArray[Int(number)] as? HYBSongModel
-            if model != nil {
-                playMusic(songModel: model!)
-            }
-            break
-        default: // 单曲循环
-            model = self.songModel
-            if model != nil {
-                playMusic(songModel: model!)
-            }
-        }
+        
+//        switch (modelIndex) {
+//        case 0: // 顺序
+//            currentIndex += 1
+//            if currentIndex >= songListModelArray.count {
+//                currentIndex = 0
+//            }
+//            model = songListModelArray[currentIndex] as? HYBSongModel
+//            if model != nil {
+//                playMusic(songModel: model!)
+//            }
+//            break
+//        case 1: // 随机
+//            var number = arc4random() % UInt32(songListModelArray.count)
+//            model = songListModelArray[Int(number)] as? HYBSongModel
+//            if model != nil {
+//                playMusic(songModel: model!)
+//            }
+//            break
+//        default: // 单曲循环
+//            model = self.songModel
+//            if model != nil {
+//                playMusic(songModel: model!)
+//            }
+//        }
     }
     
     func audioPlayView(audioView: HYBAudioPlayView, didClickPlayButton button: UIButton) {

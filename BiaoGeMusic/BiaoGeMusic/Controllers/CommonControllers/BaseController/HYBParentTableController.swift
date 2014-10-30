@@ -21,7 +21,6 @@ class HYBParentTableController:HYBBaseController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         self.tableView = UITableView(frame: CGRectMake(0, self.originY, kScreenWidth, kMiddleScreenHeight))
-        println(self.tableView?.height())
         self.view.addSubview(self.tableView!)
         self.tableView?.dataSource = self
         self.tableView?.delegate = self

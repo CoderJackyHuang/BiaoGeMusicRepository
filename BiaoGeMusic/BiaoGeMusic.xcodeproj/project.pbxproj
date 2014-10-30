@@ -114,6 +114,7 @@
 		A8B3A70B19FA5EFD0009AF0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6FA19FA5E980009AF0E /* AVFoundation.framework */; };
 		A8B3A70C19FA5F050009AF0E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A6F619FA5E8A0009AF0E /* MediaPlayer.framework */; };
 		A8B3A70E19FA5F440009AF0E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B3A70D19FA5F440009AF0E /* libz.dylib */; };
+		A8B688051A0210AD0059F1E7 /* head_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B688041A0210AD0059F1E7 /* head_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +307,7 @@
 		A8B3A70219FA5EB10009AF0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A8B3A70419FA5EB90009AF0E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A8B3A70D19FA5F440009AF0E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A8B688041A0210AD0059F1E7 /* head_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +374,7 @@
 		A83555FE19F61E010047F519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8B688041A0210AD0059F1E7 /* head_icon@2x.png */,
 				A869AB0A19F6408E003FF45A /* FreeMusic.db */,
 				A835560719F61E010047F519 /* Images.xcassets */,
 				A83555FF19F61E010047F519 /* Info.plist */,
@@ -1072,6 +1075,7 @@
 				A8B1482019F8B03A0013C798 /* ProgressHUD.bundle in Resources */,
 				A869AB2419F652BC003FF45A /* Main.storyboard in Resources */,
 				A835560819F61E010047F519 /* Images.xcassets in Resources */,
+				A8B688051A0210AD0059F1E7 /* head_icon@2x.png in Resources */,
 				A869AB0B19F6408E003FF45A /* FreeMusic.db in Resources */,
 				A8B3A6AA19FA23040009AF0E /* RefreshView.xib in Resources */,
 			);
